@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <name>AIMA-Java Core</name>
+    <version>3.0.0</version>
+    <groupId>com.googlecode.aima-java</groupId>
+    <artifactId>aima-gui</artifactId>
+
+    <parent>
+        <groupId>com.googlecode.aima-java</groupId>
+        <artifactId>aima-java</artifactId>
+        <version>3.0.0</version>
+    </parent>
+
+    <packaging>jar</packaging>
+    <description>AIMA-Java Core Algorithms from the book Artificial Intelligence a Modern Approach 3rd Ed.</description>
+    <url>https://github.com/aimacode/aima-java/</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/aimacode/aima-java/tree/AIMA3e/aima-core</url>
+        <connection>scm:git:https://github.com/aimacode/aima-java/tree/AIMA3e/aima-core</connection>
+        <developerConnection>scm:git:https://github.com/aimacode/aima-java/tree/AIMA3e/aima-core</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <id>ctjoreilly</id>
+            <name>Ciaran O'Reilly</name>
+            <email>ctjoreilly@gmail.com</email>
+        </developer>
+        <developer>
+            <id>ruediger.lunde</id>
+            <name>Ruediger Lunde</name>
+            <email>Ruediger.Lunde@gmail.com</email>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.aima-java</groupId>
+            <artifactId>aima-core</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>aima-gui</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.dic</include>
+                </includes>
+            </resource>
+        </resources>
+        <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+    </build>
+</project>
